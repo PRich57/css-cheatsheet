@@ -1,3 +1,4 @@
+/* Create variables for reused values */
 :root {
   --gray: #333;
   --purple: rgba(232, 102, 236);
@@ -5,11 +6,13 @@
   --green: rgba(132, 237, 183, 0.6)
 }
 
+/* Set universal style guide */
 * {
   box-sizing: border-box;
   font-size: 62.5%;
 }
 
+/* Set style for entire body */
 body {
   background-color: var(--gray);
   color: var(--purple);
@@ -17,24 +20,85 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+/* Style the header as flex container and direction as column */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem;
+}
+
+/* Set size and font family of h1 */
 h1 {
   font-size: 6rem;
   margin-bottom: 0;
   font-family: "Noto Sans", sans-serif;
 }
 
+/* Set specific style for the p within the header */
+header > p {
+  color: var(--white);
+  margin: 3rem;
+}
+
+/* Set style for entire main element */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 5rem;
+}
+
+/* Set style for article flex container */
+article {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: fit-content;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+/* Style each section as another flex container for additional organization */
 section {
   display: flex;
+  flex-direction: column;
   border: 1px dashed white;
   padding: 5px;
   margin: 40px 50px;
   min-width: 25%;
   align-content: space-evenly;
   justify-content: space-between;
-  width: 39rem;
+  width: 45rem;
   height: auto;
 }
 
+/* Style the h2 element so it sits on top of top-border dashes */
+h2 {
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 2.5rem;
+  padding: 10px;
+  position: relative;
+  margin-top: -20px;
+  background-color: var(--gray);
+}
+
+/* This will style the remaining p elements */
+p {
+  font-size: 1.8rem;
+  padding: 5px;
+}
+
+/* Style the pre element to fit the code element */
+pre {
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+
+/* Create the background style for the code elements */
 .linear-gradient-background {
   background-image: linear-gradient(
     var(--purple) 0%,
@@ -45,85 +109,32 @@ section {
   margin: 5px;
 }
 
-article {
-  display: flex;
-  justify-content: space-evenly;
-  min-height: fit-content;
-  margin: 20px;
-  flex-wrap: wrap;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 3rem;
-}
-
-header > p {
-  color: var(--white);
-  margin: 3rem;
-}
-
-.card-header {
-  position: relative;
-  margin-top: -20px;
-  background-color: var(--gray);
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 5rem;
-}
-
-h2 {
-  border: 1px solid var(--white);
-  border-radius: 5px;
-  font-size: 2.5rem;
-  padding: 10px;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-}
-
-p {
-  font-size: 1.5rem;
-  padding: 5px;
-}
-
+/* Set the code color, size, margin, and padding  */
 code {
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-left: -30px;
   padding-right: 10px;
   padding-bottom: 10px;
 }
 
+/* Create a footer as a flex with centered content */
 footer {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-pre {
-  width: auto;
-  height: auto;
-  padding: 5px;
-}
-
-code,
-.card-header {
+/* Set the transition and style of the glow */
+pre,
+h2 {
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
-    /* text-wrap: wrap; */
 }
 
-@media screen and (max-width: 768px) {
-
+/* Set the glow for each card while hovering */
+pre:hover, h2:hover {
+  box-shadow: 5px 5px 10px
+  var(--purple), inset 5px 5px 15px var(--green);
 }
+
