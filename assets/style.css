@@ -1,0 +1,129 @@
+:root {
+  --gray: #333;
+  --purple: rgba(232, 102, 236);
+  --white: white;
+  --green: rgba(132, 237, 183, 0.6)
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--gray);
+  color: var(--purple);
+  font-size: 6rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-bottom: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  border: 1px dashed white;
+  padding: 5px;
+  margin: 40px 50px;
+  min-width: 25%;
+  align-content: space-evenly;
+  justify-content: space-between;
+  width: 39rem;
+  height: auto;
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(
+    var(--purple) 0%,
+    var(--green) 100%
+  );
+  height: 100%;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: fit-content;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem;
+}
+
+header > p {
+  color: var(--white);
+  margin: 3rem;
+}
+
+.card-header {
+  position: relative;
+  margin-top: -20px;
+  background-color: var(--gray);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 5rem;
+}
+
+h2 {
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 2.5rem;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+code {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-left: -30px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+pre {
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+
+code,
+.card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    /* text-wrap: wrap; */
+}
+
+@media screen and (max-width: 768px) {
+
+}
