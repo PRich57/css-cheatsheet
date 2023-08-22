@@ -4,6 +4,8 @@
 
 The purpose of this project is to show the user how to create certain specific styles using CSS. Furthermore, this project was used to show me, as a boot camp student, how to recreate a web app using HTML and CSS when provided with only an image of how the app should appear, but without any HTML or CSS starter code.
 
+Visit the site by clicking [here!](https://prich57.github.io/css-cheatsheet/)
+
 ## Installation
 
 N/A
